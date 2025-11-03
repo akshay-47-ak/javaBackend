@@ -10,13 +10,36 @@
 		https://www.springframework.org/schema/context/spring-context.xsd
 		">
 
-	<bean id="std1" class="com.springCore.Student">
-	     <property name="id" value="1" />
+	<bean id="emp1" class="com.springCore.collections.emp1">
+
+		<property name="id" value="101" />
 		<property name="name" value="John Doe" />
-		<property name="address" value="Satara"></property>
+
+
+		<property name="phones">
+		<list>
+			<value>123-456-7890</value>
+			<value>987-654-3210</value>
+		</list>
+		</property>
+		
+		<property name="addresses">
+            <set>
+                <value>123 Main St, Springfield</value>
+                <value>456 Elm St, Shelbyville</value>
+            </set>
+            
+            </property>
+
+		<property name="courses">
+			<map>
+				<entry key="101" value="Mathematics" />
+				<entry key="102" value="Physics" />
+				<entry key="103" value="Chemistry" />
+			</map>
+		</property>
 		
 	</bean>
-
 
 
 	<!-- more bean definitions go here -->
